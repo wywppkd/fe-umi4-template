@@ -1,3 +1,16 @@
+import { useState } from 'react';
+
 export default function HomePage() {
-  return <div>Hello Umi4</div>;
+  const [count, setCount] = useState(0);
+  function add() {
+    setCount(count + 1);
+  }
+
+  return (
+    <div>
+      <button type="button" onClick={add}>
+        add {count}
+      </button>
+    </div>
+  );
 }
